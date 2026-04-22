@@ -1,4 +1,5 @@
 import './App.css'
+import Cmss from './cms2'
 import Cms from './cms'
 
 function App() {
@@ -6,7 +7,9 @@ function App() {
 
   return (
     <>
-    <Cms/>
+    <Cmss/>
+    {/* <Cms/> */}
+
     </>
   )
 }
