@@ -2,7 +2,6 @@ import { useState } from "react";
 
 export default function Cmss() {
 
-  // Change these numbers to update the stats automatically
   const writers = 300;
   const readers = 900;
   const audience = writers + readers;
@@ -21,7 +20,7 @@ export default function Cmss() {
         </p>
       </div>
 
-      {/* ── NAV ── */}
+      {/* ── Navbar ── */}
       <nav className="flex justify-between items-center bg-black text-white px-6 py-3">
         <div className="flex gap-6">
           <a className="text-sm hover:underline cursor-pointer hover:text-gray-300">Create</a>
@@ -30,7 +29,7 @@ export default function Cmss() {
         <div className="flex gap-2">
           <button
             onClick={() => setModal("signup")}
-            className="border border-white text-white text-sm px-4 py-1 hover:bg-white hover:text-black transition-colors"
+            className="border border-white text-white text-sm px-4 py-1 hover:bg-white hover:text-black"
           >
             Sign Up
           </button>
