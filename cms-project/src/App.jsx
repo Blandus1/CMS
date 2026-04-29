@@ -2,6 +2,7 @@ import { BrowserRouter,Routes, Route, Link } from 'react-router-dom'
 import './App.css'
 import Cmss from './cms2'
 import Cms from './cms'
+import Write from './Write'
 
 function App() {
  
@@ -10,11 +11,14 @@ function App() {
     <>
   {/* <Cmss/> */}
   <BrowserRouter>
-  {/* <Link to="/" className='uppercase text-red-400'>Mine</Link>
-  <Link to="version2" className='uppercase'>v2</Link> */}
+  <Link to="/" className='uppercase text-red-400'>Mine</Link>
+  <Link to="version2" className='uppercase'>V2</Link>
+  <Link to="start-writing" >Write</Link>
   <Routes>
     <Route path="/" element=  {<Cms/>}/>
     <Route path="/version2" element=  {<Cmss/>}/>
+    <Route path="/start-writing" element=  {<Write/>}/>
+
   </Routes>
   </BrowserRouter>
   

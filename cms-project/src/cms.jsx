@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const writers= 300;
 const readers= 900;
@@ -7,7 +8,8 @@ const audience = writers + readers;
 export default function Cms(){
     const[modal,setModal] =useState(null)
     const [confirmUnknown,setConfirmUnknown]= useState(null)
-    const [writing,setWriting]= useState(null)
+    // const [writing,setWriting]= useState(null)
+    const navigate= useNavigate()
 
     return (
         <>
@@ -148,9 +150,8 @@ export default function Cms(){
                 cancel
               </button>
               <button 
-              onClick={()=>setWriting('contentpage')}
-              //onClick fxn that leads to blank writing page with a title and a publish button at the end.
-              // this page shall have a home button, history to track where they left off, views they got and comments from fans
+              onClick={()=>navigate("/start-writing")}
+              //page here shall show history to track where they left off, views they got and comments from fans
               className="px-4 py-1.5 rounded-lg text-sm text-white bg-black hover:bg-white hover:text-black">
                 Write
               </button>
@@ -159,7 +160,7 @@ export default function Cms(){
         </div>
       ) }
       {/* Content writing modal */}
-      {writing && (
+      {/* {writing && (
       <div className="fixed inset-0 flex items-center justify-center z-50">
       <div className="flex flex-col bg-white rounded-xl shadow-xl p-6  w-full h-screen">
         <input 
@@ -191,7 +192,7 @@ export default function Cms(){
         </div>
       </div>
       </div>
-)}
+)} */}
         </>
     )
 }
